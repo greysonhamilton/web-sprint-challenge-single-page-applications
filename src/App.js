@@ -15,7 +15,7 @@ const initialOrder = {
 
     origianred: false,
     garlicranch: false,
-    barbecuesauce: false,
+    barbecue: false,
     spinachalfredo: false,
 
   },
