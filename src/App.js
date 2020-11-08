@@ -11,14 +11,24 @@ const initialOrder = {
 
   name: '',
   size: '',
+  sauce: {
+
+    origianred: false,
+    garlicranch: false,
+    barbecuesauce: false,
+    spinachalfredo: false,
+
+  },
+
   toppings: {
+
     pepperoni: false,
     sausage: false,
     canadianbacon: false,
     spicyitaliansausage: false,
     grilledchicken: false,
     onions: false,
-    greenPepper: false,
+    greenpepper: false,
     dicedtomato: false,
     blackolives: false,
     roastedgarlic: false,
@@ -26,6 +36,7 @@ const initialOrder = {
     threecheese: false,
     pineapple: false,
     xtracheese: false
+
   },
   specialInstructions: '',
   quantity: '',
@@ -67,6 +78,15 @@ const App = () => {
 
   }
 
+  const onCheckboxChange2 = (e) => {
+
+    const { name, checked } = e.target;
+    setFormValues({...formValues,
+      sauce: {...formValues.sauce,
+        [name]: checked,}})
+
+  }
+
   const onInputChange = (e) => {
 
     const { name, value } = e.target;
@@ -102,8 +122,11 @@ const App = () => {
     const newOrder = {
 
       name: formValues.name.trim(),
+      size: formValues.size.trim(),
+      sauce: Object.keys(formValues.sauce)
+        .filter(sauceName => (formValues.sauce[sauceName] === true)),
       toppings: Object.keys(formValues.toppings)
-        .filter(toppingname => (formValues.toppings[toppingname] === true)),
+        .filter(toppingName => (formValues.toppings[toppingName] === true)),
       specialInstructions: formValues.specialInstructions.trim(),
       quantity: formValues.quantity,
 
@@ -131,10 +154,11 @@ const App = () => {
         onInputChange2 = {onInputChange2} onCheckboxChange = {onCheckboxChange} 
         disabled = {disabled} formValues = {formValues} formErrors = {formErrors} />}
          />
-
+    
     </div>
-      <h1>Lambda Eats</h1>
-      <p>You can remove this code and create your own header</p>
+
   );
+
 };
+
 export default App;
