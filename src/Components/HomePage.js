@@ -15,10 +15,10 @@ const HomePage = () => {
             </div>
 
             <div>
-                <h6>Food Deliver in Gotham City</h6>
+                <h4>Food Deliver in Gotham City</h4>
                 <div>
                     <img alt='food' src='https://picsum.photos/300/200' />
-                    <h8>McDonald's</h8>
+                    <h5>McDonald's</h5>
                     <p>American - Fast Food - Burgers</p>
                     <button>20-30 mins</button>
                     <button>$5.99 Deliver Fee</button>
@@ -26,7 +26,7 @@ const HomePage = () => {
 
                 <div>
                     <img alt='food' src='https:picsum.photos/300/200' />
-                    <h8>Sweet Green</h8>
+                    <h5>Sweet Green</h5>
                     <p>Healthy - Salads</p>
                     <button>30-45 mins</button>
                     <button>$4.99 Delivery Fee</button>
@@ -34,7 +34,7 @@ const HomePage = () => {
 
                 <div>
                     <img alt='food' src='https://picsum.photos/300/200' />
-                    <h8>Starbucks</h8>
+                    <h5>Starbucks</h5>
                     <p>Cafe - Coffee and Tea - Breakfast and Lunch</p>
                     <button>10-20 mins</button>
                     <button>$3.99 Delivery Fee</button>
